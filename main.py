@@ -26,7 +26,7 @@ results = []
 if opcao == 'folha':
     import src.folhasp as site_atual
 elif opcao == 'estadao':
-    import src.estadao as site_atual
+    import src.estadao2 as site_atual
 elif opcao == 'uol':
     import src.uol as site_atual
 else:
@@ -57,7 +57,7 @@ if not os.path.exists(dir_path):
     #Preenche um CSV com os resultados obtidos (Título, Data, descrição e link)
 with open('{}.csv'.format(os.path.join(dir_path, "_Resultados_da_coleta")), 'w',  encoding='utf-8') as csv_file:
     for res in results:
-        csv_file.write((res['title'] + '\t' + res['date'] + '\t' + res['imagem'] + '\t' + res['link']).replace('\n', ' '))
+        csv_file.write((res['title'] + '||\t' + res['date'] + '||\t' + res['imagem'] + '||\t' + res['link']).replace('\n', ' '))
         csv_file.write('\n')
         qntdresult+=1
         arquivotxt = re.sub('\W', '_', res['title'])
@@ -73,10 +73,10 @@ with open('{}.csv'.format(os.path.join(dir_path, "_Resultados_da_coleta")), 'w',
             text.write(content)
 with open('{}.txt'.format(os.path.join(dir_path, "_Parâmetros_da_coleta")), 'w', encoding='utf-8') as text:
     if(opcao =='uol' or opcao == 'estadao'):
-        text.write(f'Palavras chaves: {palavrachave}\nNome da pasta: {nomearquivo}\nSite: {opcao}\nData inicial: {datainicial}\nData final: {datafinal}\nNotícias encontradas (no site): {valor}\n Resultados obtidos: {qntdresult}')
+        text.write(f'Palavra chave: {palavrachave}\nNome da pasta: {nomearquivo}\nSite: {opcao}\nData inicial: {datainicial}\nData final: {datafinal}\nNotícias encontradas (no site): {valor}\nResultados obtidos: {qntdresult}')
     elif (opcao == 'folha'):
         text.write(
-            f"Palavras Chaves: {palavrachave}\nNome da pasta: {nomearquivo}\nSite: {opcao}\nPeríodo: Último ano\nNotícias encontradas: {valor}\nResultados obtidos: {qntdresult}")
+            f"Palavra Chave: {palavrachave}\nNome da pasta: {nomearquivo}\nSite: {opcao}\nPeríodo: Último ano\nNotícias encontradas: {valor}\nResultados obtidos: {qntdresult}")
 
 
 
