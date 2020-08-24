@@ -6,7 +6,7 @@ The code leaves the search page of news sites with a filter for a period of time
 
 - Selenium is a portable framework for testing web applications. Selenium provides a reproduction tool to create functional tests without the need to learn a test scripting language.
 
-Disclaimer: The use of this library/software in the wrong way is the sole responsibility of the user. This code was developed for academic projects and approved by the sites that are receiving data collection.
+*Disclaimer: The use of this library/software in the wrong way is the sole responsibility of the user. This code was developed for academic projects and approved by the sites that are receiving data collection.
 
 Development current status
 --------------------------
