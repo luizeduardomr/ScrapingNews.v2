@@ -29,7 +29,7 @@ To upgrade the package if you have already installed it:
 pip install git+https://github.com/luizeduardomr/ScrapingNews.v2h --upgrade
 ```
 
-Please note that you should also install **Google Chrome browser** in order to use this software bettet
+Please note that you should also install **Google Chrome browser** in order to use this software better
 
 About the repository
 ------------
